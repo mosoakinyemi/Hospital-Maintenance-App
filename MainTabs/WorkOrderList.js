@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import { Container,Thumbnail,Left, Body, Right, Button, Icon, Title, Tab, Content, Tabs, List, ListItem, Text,} from 'native-base';
-import DetailsTab from './WOSubTab/DetailsTab';
-import TasksTab from './WOSubTab/TasksTab';
 import { StyleSheet } from 'react-native';
 
 

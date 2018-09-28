@@ -3,12 +3,13 @@ import { Container, Header,Text, Left, Body, Right, Button, Icon, Title ,Tab,Con
 
 import {StyleSheet,TouchableOpacity} from "react-native";
 
+
 export default class AssetList extends React.Component {
+
   render() {
-    
-    const {id,type,model,image} = this.props.machine;
+    const {id,type,model,image,} = this.props.machine;
           return(    
-          <ListItem thumbnail button onPress={()=>alert(type)}>
+          <ListItem thumbnail button onPress={() => this.props.navigation.navigate('DetailsScreen',{newName:type})}>
               <Left>
                 <Thumbnail square source={image} />
               </Left>
@@ -26,4 +27,6 @@ export default class AssetList extends React.Component {
 );
   }
 }
- 
+
+
+
