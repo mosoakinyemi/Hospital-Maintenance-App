@@ -3,6 +3,7 @@ import { Container, Header,Text, Left, Body, Right, Button, Icon, Title ,Tab,Con
 import AssetList from './AssetList';
 import {StyleSheet,TouchableOpacity} from "react-native";
 import {StackNavigator} from 'react-navigation'
+import AssetItem from './AssetItem';
 
 const ecg = require('../assets/ecg.png')
 const mri = require('../assets/mri.jpg')
@@ -57,19 +58,10 @@ const styles={
   header:{backgroundColor:'#6DD5FA'},
 };
 
-class AssetItem extends Component{
-  render(){
-     const {navigation} = this.props;
-    const itemId = navigation.getParam('newName', 'NO-name');
-    return(
-      <Content>
-      <Text>This is the Details of the {itemId}</Text>
-      </Content>
-    );
-  }
-}
+
 const AppNavigator = StackNavigator({
   HomeScreen: { screen: AssetHome },
   DetailsScreen: { screen: AssetItem },
-  AssetStack:{screen:AssetList}
+  AssetStack:{screen:AssetList},
+   initialRouteName: 'Home',
 });
