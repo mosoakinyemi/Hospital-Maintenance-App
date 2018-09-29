@@ -3,10 +3,12 @@ import { Container, Header,Text, Left, Body, Right, Button, Icon, Title ,Tab,Con
 
 import {StyleSheet,TouchableOpacity} from "react-native";
 
-
 export default class AssetList extends React.Component {
-
+getImage=()=>{
+      return this.props.machine.image;
+    }
   render() {
+    
     const {id,type,model,image,} = this.props.machine;
           return(    
           <ListItem thumbnail button onPress={() => this.props.navigation.navigate('DetailsScreen',{newName:type})}>

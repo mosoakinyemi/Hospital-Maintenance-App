@@ -15,10 +15,8 @@ export default class WorkOrderTab extends Component {
       maintenance,
       notes,
     } = this.props.orderDetails;
-
-
+  
     return (
- 
       <List >
         <ListItem itemDivider >
           <Left>
@@ -26,21 +24,20 @@ export default class WorkOrderTab extends Component {
             <Text>DUE: {dueDate}</Text>
           </Left>
         </ListItem>
-        <ListItem  button onPress={console.log('utem pressed 2')} thumbnail >
+        <ListItem   thumbnail >
           <Left>
-            <Thumbnail  square source={image} />
+           <Thumbnail square source={image} />
           </Left>
           <Body>
-            <Text> {task} </Text>
-            <Text> {machine} </Text>
+            <Text>{task}</Text>
+            <Text style={{fontStyle:'bold'}}>{machine}</Text>
           </Body>
           <Right>
-            <Button rounded style={{backgroundColor:(maintenance==='Urgent')?'red':(maintenance==='Medium')?'blue':'green', opacity:0.7}}>
-              <Text>{maintenance}</Text>
+            <Button rounded style={{backgroundColor:maintenance==='Normal'?'green':maintenance==='Medium'?'blue':'red', opacity:0.7}}>
+              <Text>{maintenance}</Text> 
             </Button>
           </Right>
         </ListItem>
-    //lower list item or part b
         <ListItem>
         <Left> 
           <Text>#{id}</Text>
@@ -62,12 +59,5 @@ const styles = {
   header: { backgroundColor: '#6DD5FA' },
   boldText: { fontStyle: 'bold' },
  
- /* btnColor:{backgroundColor:switch({maintenance}){
-    case:'Normal'
-    return 'green';
 
-  }
-  },
-
-*/
 };

@@ -3,7 +3,7 @@ import { Container, Header,Text, Left, Body, Right, Button, Icon, Title ,Tab,Con
 import AssetList from './AssetList';
 import {StyleSheet,TouchableOpacity} from "react-native";
 import {StackNavigator} from 'react-navigation'
-import AssetItem from './AssetItem';
+import {AssetItem}from './AssetItem';
 
 const ecg = require('../assets/ecg.png')
 const mri = require('../assets/mri.jpg')
@@ -15,14 +15,12 @@ export default class AssetsTab extends Component {
     return(<AppNavigator/>);
   }
 }
-
-export class AssetHome extends Component{
+ class AssetHome extends Component{
   static navigationOptions = {
 header: null,
 };
   render() {
       var items = [{id:1,type:'ECG',model:1,image:ecg},{id:2,type:'SUC',model:2,image:suc},{id:3,type:'MRI',model:3, image:mri},{id:4,type:'SPY',model:2, image:spy}];
-
     return (
       <Container>
       <Header style={styles.header} hasTabs>
@@ -63,5 +61,4 @@ const AppNavigator = StackNavigator({
   HomeScreen: { screen: AssetHome },
   DetailsScreen: { screen: AssetItem },
   AssetStack:{screen:AssetList},
-   initialRouteName: 'Home',
-});
+  });

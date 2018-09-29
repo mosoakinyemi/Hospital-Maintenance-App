@@ -6,11 +6,10 @@ import ScanTab from './MainTabs/ScanTab';
 import MoreTab from './MainTabs/MoreTab';
 
 import {StyleSheet} from "react-native";
-
 export default class HeaderExample extends Component {
   render() {
     return (
-      <Container>
+      <Container style={{marginTop:24}}>
         <Tabs tabBarPosition="bottom" >
           <Tab  heading={ <TabHeading><Icon type="FontAwesome" name="home" /><Text>Assets</Text></TabHeading>}>
             <AssetTab />
