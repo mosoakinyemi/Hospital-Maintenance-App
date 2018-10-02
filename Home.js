@@ -42,7 +42,7 @@ const Home= TabNavigator(
     tabBarComponent: TabBarBottom,
     tabBarPosition: 'bottom',
     tabBarOptions: {
-      activeTintColor: 'yellow',
+      activeTintColor: 'blue',
       inactiveTintColor: 'gray',
     },
     animationEnabled: true,
