@@ -45,7 +45,7 @@ header: null,
                 }>
             </List>
         </Content>
-        <FABExample navigation={this.props.navigation} />
+         <FABExample navigation={this.props.navigation} />
       </Container>
     );
   }

@@ -18,10 +18,11 @@ import {connect} from 'react-redux'
   }
   render() {
     return (
-      <Container>
         <Content>
           <Form>
+           <Text style={styles.labelBtn}>{this.props.title}</Text>
             <Item picker>
+            
               <Picker
                 mode="dropdown"
                 iosIcon={<Icon name="ios-arrow-down-outline" />}
@@ -41,9 +42,14 @@ import {connect} from 'react-redux'
             </Item>
           </Form>
         </Content>
-      </Container>
-    );
+      );
   }
+}
+const styles={
+  labelBtn:{
+        color:'blue',
+
+  },
 }
 
 const mapStateToProps=(state)=>{

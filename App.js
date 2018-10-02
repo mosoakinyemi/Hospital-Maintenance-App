@@ -4,14 +4,16 @@ import {createStore} from 'redux'
 import Home from './Home'
 
 //----Creating the reducers----//
-const initialState={anser:''}
+const initialState={anser:'', newEname:''}
 
 const assetReducer=(state=initialState,action)=>{
   switch (action.type) {
     case 'UPDATE_VALUE':
       return { ...state,
-        anser: action.value}
-        
+        anser: action.value};
+    case 'UPDATE_EQUIMPMENT_NAME':
+        return { ...state,
+        newEname: action.value}
     default:
       return state;
   }
