@@ -23,7 +23,7 @@ submit=()=>{
   
     var value=this.state.text
     this.props.dispatch({type:'UPDATE_EQUIMPMENT_NAME',value})
-    console.log(`From Redux ${this.props.newEname}`)
+    console.log(`From Redux ${this.props.newEQname}`)
   }
   render(){
   
@@ -51,6 +51,7 @@ submit=()=>{
      <Text>  submit  </Text>
      </Button>
      </Item>
+     <Text>  {this.props.newEQname} in {this.props.newEQCategory}</Text>
       </Content>
       </Container>
     );

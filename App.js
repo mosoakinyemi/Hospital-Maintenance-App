@@ -4,16 +4,16 @@ import {createStore} from 'redux'
 import Home from './Home'
 
 //----Creating the reducers----//
-const initialState={anser:'', newEname:''}
+const initialState={newEQCategory:'', newEQname:'',categories:['Radiology','Diagnostics','Rehabilitation','Dental','Microbiology Lab','Surgery','Chemistry Lab','Dialysis'],}
 
 const assetReducer=(state=initialState,action)=>{
   switch (action.type) {
     case 'UPDATE_VALUE':
       return { ...state,
-        anser: action.value};
+        newEQCategory: action.value};
     case 'UPDATE_EQUIMPMENT_NAME':
         return { ...state,
-        newEname: action.value}
+        newEQname: action.value}
     default:
       return state;
   }

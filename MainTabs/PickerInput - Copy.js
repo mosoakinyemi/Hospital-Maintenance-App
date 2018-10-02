@@ -7,13 +7,15 @@ import {connect} from 'react-redux'
     this.state = {
       selected2: undefined
     };
-  } 
+  }
   onValueChange2(value: string) {
     this.setState({
       selected2: value
     }),
    console.log(`From Picker: ${value}`),
-  this.props.dispatch({type:'UPDATE_VALUE',value})}
+  this.props.dispatch({type:'UPDATE_VALUE',value}),
+    console.log(`from redux ${this.props.anser}`) 
+  }
   render() {
     return (
         <Content>
@@ -31,12 +33,11 @@ import {connect} from 'react-redux'
                 selectedValue={this.state.selected2}
                 onValueChange={this.onValueChange2.bind(this)}
               >
-          {
-            this.props.categories.map((item, index) => (
-              <Picker.Item label={item} 
-              value={item} />
-            ))
-         }
+                <Picker.Item label="Wallet" value="Wallet" />
+                <Picker.Item label="ATM Card" value="ATM Card" />
+                <Picker.Item label="Debit Card" value="Debit" />
+                <Picker.Item label="Credit Card" value="Credit " />
+                <Picker.Item label="Net Banking" value="Net" />
               </Picker>
             </Item>
           </Form>
