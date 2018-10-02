@@ -4,17 +4,16 @@ import AssetList from './AssetList';
 import {StyleSheet,TouchableOpacity} from "react-native";
 import {StackNavigator} from 'react-navigation'
 import {AssetItem}from './AssetItem';
+import { getStatusBarHeight } from 'react-native-status-bar-height';
+import FABExample from './fab'
+import AddAsset from './AddAsset'
 
 const ecg = require('../assets/ecg.png')
 const mri = require('../assets/mri.jpg')
 const spy = require('../assets/spy.jpg')
 const suc = require('../assets/suc.jpg')
 
-export default class AssetsTab extends Component {
-  render(){
-    return(<AppNavigator/>);
-  }
-}
+
  class AssetHome extends Component{
   static navigationOptions = {
 header: null,
@@ -46,7 +45,7 @@ header: null,
                 }>
             </List>
         </Content>
-        
+        <FABExample navigation={this.props.navigation} />
       </Container>
     );
   }
@@ -61,4 +60,13 @@ const AppNavigator = StackNavigator({
   HomeScreen: { screen: AssetHome },
   DetailsScreen: { screen: AssetItem },
   AssetStack:{screen:AssetList},
+  AddAsset:{screen:AddAsset}
   });
+
+export default class AssetsTab extends Component {
+  render(){
+    return(
+      
+      <AppNavigator />);
+  }
+}

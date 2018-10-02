@@ -11,7 +11,7 @@ getImage=()=>{
     
     const {id,type,model,image,} = this.props.machine;
           return(    
-          <ListItem thumbnail button onPress={() => this.props.navigation.navigate('DetailsScreen',{newName:type})}>
+          <ListItem thumbnail button onPress={() => this.props.navigation.navigate('DetailsScreen',{newName:type,itemImage:image})}>
               <Left>
                 <Thumbnail square source={image} />
               </Left>

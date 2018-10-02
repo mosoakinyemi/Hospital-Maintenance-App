@@ -1,25 +1,25 @@
 import React, { Component } from 'react';
-import { Container, Header, Left, Body, Right, Button, Icon, Title ,Tab,Content,Tabs} from 'native-base';
-
+import { Container, Header, Left, Body, Right, Button, Icon, Title ,Tab,Content,Tabs,Text} from 'native-base';
+import Scanner from './Scanner'
 import {StyleSheet} from "react-native";
+import Torch from 'react-native-torch';
+
 
 export default class ScanTab extends Component {
+  state = {
+      isTorchOn: false,
+    };
+
+  _handlePress=()=> {
+    const { isTorchOn } = this.state;
+    Torch.switchState(!isTorchOn);
+    this.setState({ isTorchOn: !isTorchOn });
+  }
   render() {
     return (
-      <Container>
-          <Left>
-            <Button transparent success>
-              <Icon name='arrow-back' style={{color:'white'}}  />
-            </Button>
-          </Left>
-          <Body>
-            <Title style={{color:'white'}}>Scan</Title>
-          </Body>
-          <Right>
-            <Button transparent>
-              <Icon name='search' style={{color:'white'}} />
-            </Button>
-          </Right>
+      <Container style={{marginTop:24}}>
+      <Button primary onPress={this._handlePress}><Text> Light on </Text></Button>
+         <Scanner />
       </Container>
     );
   }

@@ -11,6 +11,10 @@
     "react-native": "https://github.com/expo/react-native/archive/sdk-30.0.0.tar.gz",
     "native-base": "2.8.0",
     "react-native-elements": "0.19.1",
-    "react-navigation": "2.17.0"
+    "react-native-status-bar-height": "2.1.0",
+    "react-native-torch": "1.1.4",
+    "react-navigation": "2.17.0",
+    "react-redux": "5.0.7",
+    "redux": "4.0.0"
   }
 }

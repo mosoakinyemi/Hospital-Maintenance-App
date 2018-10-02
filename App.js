@@ -1,36 +1,30 @@
 import React, { Component } from 'react';
-import { Container, Header, Left, Body, Right, Button, Icon, Title ,Tab,Content,Tabs,TabHeading,Text} from 'native-base';
-import AssetTab from './MainTabs/AssetTab';
-import WorkOrderTab from './MainTabs/WorkOrderTab';
-import ScanTab from './MainTabs/ScanTab';
-import MoreTab from './MainTabs/MoreTab';
+import {Provider} from 'react-redux'
+import {createStore} from 'redux'
+import Home from './Home'
 
-import {StyleSheet} from "react-native";
-export default class HeaderExample extends Component {
-  render() {
-    return (
-      <Container style={{marginTop:24}}>
-        <Tabs tabBarPosition="bottom" >
-          <Tab  heading={ <TabHeading><Icon type="FontAwesome" name="home" /><Text>Assets</Text></TabHeading>}>
-            <AssetTab />
-          </Tab>
-          <Tab heading={ <TabHeading><Icon name="paper" /><Text>Work Orders</Text></TabHeading>}>
-            <WorkOrderTab />
-          </Tab>
-          <Tab heading={ <TabHeading><Icon name="camera" /><Text>Scan</Text></TabHeading>} >
-            <ScanTab />
-          </Tab>
-          <Tab heading={ <TabHeading><Icon  name="keypad" /><Text>More</Text></TabHeading>} >
-            <MoreTab />
-          </Tab>
-        </Tabs>
-      </Container>
+//----Creating the reducers----//
+const initialState={anser:''}
+
+const assetReducer=(state=initialState,action)=>{
+  switch (action.type) {
+    case 'UPDATE_VALUE':
+      return { ...state,
+        anser: action.value}
+        
+    default:
+      return state;
+  }
+}
+//---End of reducers---//
+const store =createStore(assetReducer)
+
+export default class App extends Component{
+  render(){
+    return(
+      <Provider store={store}>
+      <Home />
+      </Provider>     
     );
   }
 }
-
-const styles={
-  header:{backgroundColor:'#6DD5FA'},
-
-};
-
