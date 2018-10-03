@@ -3,8 +3,10 @@ import { Container, Header,Text, Left, Body, Right, Button, Icon, Title,Content,
 import {StyleSheet,TouchableOpacity} from "react-native";
 import PickerInput from './PickerInput'
 import {connect} from 'react-redux'
+import firebase from 'firebase'
 
  class AddAsset extends Component{
+   
      state={
 text:''
 }
@@ -19,14 +21,15 @@ text:''
     };
   };
 
-submit=()=>{
-  
+submit=()=>{ 
     var value=this.state.text
     this.props.dispatch({type:'UPDATE_EQUIMPMENT_NAME',value})
-    console.log(`From Redux ${this.props.newEQname}`)
-  }
-  render(){
-  
+    firebase.database().ref('/assets').push({
+        name: this.props.newEQCategory
+    });
+}
+  render()
+  {
     const {navigation} = this.props;
    
     return(
@@ -63,4 +66,3 @@ const mapStateToProps=(state) =>{
   return state
 }
 export default connect(mapStateToProps)(AddAsset);
-
