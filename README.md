@@ -1,4 +1,4 @@
-## Hospital-Maintenance-App [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)![](https://img.shields.io/github/license/Moshman20/Hospital-Maintenance-App.svg) ![](https://img.shields.io/badge/build-in%20progress-blue.svg) ![](https://img.shields.io/badge/completed-%20%2075%25%20%20-brightgreen.svg)
+## Hospital-Maintenance-App ![](https://img.shields.io/github/license/Moshman20/Hospital-Maintenance-App.svg) ![](https://img.shields.io/badge/build-in%20progress-blue.svg) ![](https://img.shields.io/badge/completed-%20%2075%25%20%20-brightgreen.svg)
 A mobile app to manage equipment and assets especially in Large Hospitals
 ## Technologies and Frameworks used
 Ex. -
