@@ -10,9 +10,6 @@ Ex. -
 # Screenshots
 ![](https://i.ibb.co/VQ2yfLt/myApp1.png "First ScreenShot") ![](https://i.ibb.co/C7KynSC/myApp2.png "Screenshot 2") ![](https://i.ibb.co/ZKXMp3F/myApp3.png)
 
-
 ## Features
--Images of equipment and machines can be uploaded.
--QR codes of machines can be scanned
-
-![](https://i.ibb.co/VQ2yfLt/myApp1.png "First ScreenShot") ![](https://i.ibb.co/C7KynSC/myApp2.png "Screenshot 2") ![](https://i.ibb.co/ZKXMp3F/myApp3.png)
+ _Images of equipment and machines can be uploaded.
+ _QR codes of machines can be scanned
