@@ -10,5 +10,5 @@ A mobile app to manage equipment and assets especially in Large Hospitals
 ![](https://i.ibb.co/VQ2yfLt/myApp1.png "First ScreenShot") ![](https://i.ibb.co/C7KynSC/myApp2.png "Screenshot 2") ![](https://i.ibb.co/ZKXMp3F/myApp3.png)
 
 ## Features
- _Images of equipment and machines can be uploaded.
- _QR codes of machines can be scanned
+ -Images of equipment and machines can be uploaded.
+ -QR codes of machines can be scanned
